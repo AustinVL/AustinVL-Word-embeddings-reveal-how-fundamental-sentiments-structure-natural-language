@@ -18,8 +18,6 @@ from matplotlib.pyplot import scatter
 import matplotlib.pyplot as plt
 import gensim
 import re
-import tensorflow as tf
-import tensorflow_hub as hub
 
 np.random.seed(2019)
 
