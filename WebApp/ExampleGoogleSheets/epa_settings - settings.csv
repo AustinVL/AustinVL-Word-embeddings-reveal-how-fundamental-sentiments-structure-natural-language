@@ -1,0 +1,9 @@
+Variable,Details,Value,Conditions,Notes
+max_ratings,Max count of ratings (Y),90,Must be divisable by X & 3,The maximum number of ratings a rater can do.
+ratings_round,"Ratings ""round"" count (X)",90,Must be divisable by M,Number of ratings that a rater does before being asked if they want to do another round.
+same_type_block,Size of same-type block (M),30,Must be divisable by N,"Number of consecutive concepts (words) of a type (behaviors, identities, modifiers) that are provided before switching."
+same_dimension_n,"Same-dimension count (N, only relevant for ""same-dimension"" logic)",30,,"Number of consecutive ratings done within a particular dimension (E, P, A) by a rater"
+logic,Logic for phrases selection,same_dimension,,"same_dimension: have rater do N consecutive ratings of either E, P, or A for different concepts
+same_phrase: have a rater do the E, P, and A ratings of a particular concept consecutively "
+dimension_order,Dimension order,Random,,"Either random or a specified ordering of E, P, A"
+money_per_round,"Money per ratings ""round"" (Z)",1.5,,Pay to a participant for each round of X ratings
