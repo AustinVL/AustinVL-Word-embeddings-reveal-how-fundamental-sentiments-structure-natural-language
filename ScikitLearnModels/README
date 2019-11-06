@@ -1,1 +1,0 @@
-The models saved here can be loaded using the joblib.load function from the sklearn.externals library 
