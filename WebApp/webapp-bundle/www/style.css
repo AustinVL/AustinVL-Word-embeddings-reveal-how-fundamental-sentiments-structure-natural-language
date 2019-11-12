@@ -1,0 +1,68 @@
+@import url("//fonts.googleapis.com/css?family=Exo+2");
+
+body, label, .form-control {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+}
+
+h1, h3 {
+  font-weight: 600;
+}
+
+hr {
+  border-top-color: #89B0C8;
+}
+
+#mturk_id::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#ratings_panel .col-sm-3 {
+  padding-right: 60px;
+  padding-left: 60px;
+  font-size: 18px;
+}
+
+a.action-button:hover, a.action-button:focus {
+  text-decoration: none;
+}
+
+#ratings_panel .row:nth-of-type(2) {
+  height: 85px;
+}
+
+.shiny-notification-close, .noUi-value-large, .noUi-marker-normal { 
+  display: none; 
+}
+
+.labels-row {
+  margin-left: 23.5%;
+  margin-top: -40px;
+}
+
+.slider-row { 
+  padding: 0; 
+}
+
+.slider-row .shiny-input-container div { 
+  margin-bottom: 30px !important; 
+}
+
+.slider-labels {
+  color: #5b5c65;
+  font-size: 14px;
+  position: absolute;
+}
+
+.noUi-target {
+  box-shadow: none;
+}
+
+.noUi-handle {
+  border-color: #b1b1b1;
+  box-shadow: none;
+}
