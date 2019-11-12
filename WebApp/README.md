@@ -1,4 +1,4 @@
-We used shiny.io to host the webapp -- some sort of server solution is needed that will allow multiple people to be editing the Google Doc while retaining reasonable speed.
+oWe used shiny.io to host all files in the **WebApp Bundle** directory along with a Google OAuth file that allowed the application access to a Google account -- some sort of server solution is needed that will allow multiple people to be editing the Google Doc while retaining reasonable speed.
 
 In order for the app to be used, the sheets need to be included as part of a Google Docs file.  
 
@@ -25,4 +25,3 @@ While the app was developed to allow multiple rounds by a rater, with the option
 **concepts.csv** contains the list of concepts to be fielded.  The phrase field contains the whole text of the concept, while type indicates "noun" (identity), "verb" (behavior), and "adjective" (modifier).
 
 **results.csv** contains the results.  Each rating is on its own row, with the rating value provided, the full text of the concept, its dimension, the time from the prior rating, and the MTurk_id and IP of the rater.
-
