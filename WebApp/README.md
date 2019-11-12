@@ -1,4 +1,28 @@
-In this folder you'll find the scripts that make up the web application we used to collect the EPA ratings of our original dataset. For a general guide to hosting R Shiny application, see the R Shiny documentation (https://shiny.rstudio.com/).
-As of now, the app has a couple of highly salient problems:
-1. The app assigns concepts to participants completely at random. This means that the number of ratings per concept will be distributed randomly, meaning that some concepts will be rated more than others, which is not as efficient as if all words were allocated the same number of ratings.
-2. The app loads the entire "results" Google Sheet into memory before assigning a participant to a new word. This wouldn't be a problem except that at a certain point, the file can become too big and the app might fail to run. To avoid this with the script as is (i.e. what we did to obtain the results we present), researchers must periodically clear the "results" Google sheet document and move it to another accesible storage spot, e.g. another Google sheet document.
+We used shiny.io to host the webapp -- some sort of server solution is needed that will allow multiple people to be editing the Google Doc while retaining reasonable speed.
+
+In order for the app to be used, the sheets need to be included as part of a Google Docs file.  
+
+The webapp works using three Google sheets:
+
+**settings.csv** contains the basic settings that the app uses for collecting ratings.  The Notes field in the sheet provides a description of each setting, but here is an overview of the features that one can set:
+
+* Maximum number of ratings that a rater can do in a session.
+* Number of ratings that a rater does before being asked if they want to do another round.
+* Number of consecutive concepts of a type (behaviors, identities, modifiers) that a rater is given before switching to a different type.
+* Whether the raters should do E, P, and A seriatim for each concept they are given (called "same phrase"), or only do a series of concepts on one dimension ("same dimension") before switching to another.
+* If "same dimension": Number of consecutive ratings within a particular dimension (E,P,A) by a rater. 
+* How E, P, or A should be ordered, or if their order should be random.
+* Amount of money a rater will be told they are paid for a session.
+
+Some of the settings must be evenly divisible others, as indicated in the Conditions field of the sheet:
+
+* The maximum number of ratings must be evenly divisible by the ratings per round.
+* The ratings per round must be evenly divisible by the number of ratings per block (type).
+* If the "same dimension" option is specified, the number of ratings per block must be evenly divisible by the number of ratings per dimension.
+
+While the app was developed to allow multiple rounds by a rater, with the option for them to continue, we did not field our study using this feature and so it has not been field tested for bugs.
+
+**concepts.csv** contains the list of concepts to be fielded.  The phrase field contains the whole text of the concept, while type indicates "noun" (identity), "verb" (behavior), and "adjective" (modifier).
+
+**results.csv** contains the results.  Each rating is on its own row, with the rating value provided, the full text of the concept, its dimension, the time from the prior rating, and the MTurk_id and IP of the rater.
+
