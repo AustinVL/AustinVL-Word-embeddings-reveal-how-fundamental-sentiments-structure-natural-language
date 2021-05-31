@@ -1,10 +1,10 @@
-## **DEPRECIATION ISSUE**
-This code used an older version of scikit-learn and uses features that were depreciated at or after version 0.21. Therefore, an older version of Scikit-learn will be needed to run this code at the moment. We are working on creating updated models and scripts that will work with the newest version of scikit-learn.
-
 # Word embeddings reveal how fundamental sentiments structure natural language
 All of the publicly available information and tools pertaining to "Word embeddings reveal how fundamental sentiments structure natural language", which has been conditionally accepted at American Behavioral Scientist. Previously called "Can we distill fundamental sentiments from natural language use? Evaluating word embeddings as a complement to survey-based ratings of affective meaning" and "Towards a more computational affect control theory:  Automating and democratizing the measurement of the affective meaning of concepts". 
 
 More information on the tools and information in each folder can be found in the README file in each folder.
+
+## **DEPRECIATION ISSUE**
+This code used an older version of scikit-learn and uses features that were depreciated at or after version 0.21. Therefore, an older version of Scikit-learn will be needed to run this code at the moment. We are working on creating updated models and scripts that will work with the newest version of scikit-learn.
 
 ## Analysis Scripts
 In this folder you can find the scripts we use to analyze the data for the paper, which should produce exact replication of the results offered in the paper.
