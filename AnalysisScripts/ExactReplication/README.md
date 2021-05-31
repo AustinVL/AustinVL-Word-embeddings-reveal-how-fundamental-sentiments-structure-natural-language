@@ -1,5 +1,3 @@
-In this directory you will find anlysis scripts in both a Jupyter notebook and a regular Python file. Both use Python3. Both should run without any errors, assuming the following conditions are true:
-1. All files in this directory are downloaded and in the same directory (so they can access each other)
-2. All the relevant libraries are downloaded onto your machine (see the first block of code)
-3. All the relevant GloVe files are downloaded onto your machine in the current directory (see https://nlp.stanford.edu/projects/glove/). The Word2Vec library is loaded through the Gensim library, so you don't need to download that specifically.
-4. You have sufficient memory available. The current approach in these scripts is to load all of the distributed representation libraries into memory, which is pretty memory intensive.
+In this directory you will find Jupyter notebooks and Python files corresponding to the four studies described in the forthcoming version of the paper, as well as a copy of the US Online 2015 dictionary ("EPA_dict.csv"). Assuming the latter is in the same directory, each Python script and Jupyter notebook should run without error, assuming the necessary dependencies are available.
+
+Unfortunately, getting TF (used in Study 4) to work on many machines can be troublesome. This code was ran on Google Colab. That notebook is publicly available here: https://colab.research.google.com/drive/1RA1bSo_CnPJwcJVuUtMI2toyPr4wKt4Q?usp=sharing
